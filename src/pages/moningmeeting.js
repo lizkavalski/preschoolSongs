@@ -2,15 +2,11 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { AppBar, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Stack, Box, Toolbar, Typography, Container, link } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import cupOfCoffee from '../images/cupOfCoffee.jpg'
 
-
-// data
 const cards = [
   {
     text: "Monring Meeting",
     url: "https://www.gatsbyjs.com/docs/tutorial/",
-    image:cupOfCoffee,
     description:"A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
     color: "#E95800",
   },
@@ -58,7 +54,7 @@ const cards = [
 ]
 const theme =createTheme()
 // markup
-const IndexPage = () => {
+const MorningMeeting = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -100,7 +96,7 @@ const IndexPage = () => {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Main call to action</Button>
+              <Button variant="contained"><Link to= '/'>Back to main page</Link> </Button>
               <Button variant="outlined">Secondary action</Button>
             </Stack>
           </Container>
@@ -131,7 +127,7 @@ const IndexPage = () => {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small"> <Link to = '/moningmeeting/'>Let's Go!</Link></Button>
+                    <Button size="small">View</Button>
                     <Button size="small">Edit</Button>
                   </CardActions>
                 </Card>
@@ -144,4 +140,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default MorningMeeting
