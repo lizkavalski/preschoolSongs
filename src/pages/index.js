@@ -2,7 +2,8 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { AppBar, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Stack, Box, Toolbar, Typography, Container, link } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import cupOfCoffee from '../images/cupOfCoffee.jpg'
+import cupOfCoffee from '../images/cupOfCoffee.jpg';
+import goodbye from '../images/goodbye.jpg'
 
 
 // data
@@ -11,15 +12,14 @@ const cards = [
     text: "Monring Meeting",
     url: "https://www.gatsbyjs.com/docs/tutorial/",
     image:cupOfCoffee,
-    description:"A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+    description:"Songs focusing on welcomeing and saying hello to fellow classmates at the begining of the day.",
     color: "#E95800",
   },
   {
-    text: "How to Guides",
+    text: "Goodbye Songs",
     url: "https://www.gatsbyjs.com/docs/how-to/",
-    image:"../images/cupOfCoffee.jpg",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
+    image:goodbye,
+    description: "Songs for the end of the schoolday",
     color: "#1099A8",
   },
   {
@@ -64,8 +64,8 @@ const IndexPage = () => {
       <CssBaseline />
       <AppBar position="relative">
       <title>Home Page</title>
-      <Typography variant="h1" color="inherit" noWrap>
-        Congratulations
+      <Typography variant="h1" color="inherit" noWrap align="center"> 
+        Song Book
       </Typography>
         <br />
       </AppBar>
@@ -87,22 +87,11 @@ const IndexPage = () => {
               color="text.primary"
               gutterBottom
             >
-              Album layout
+              Table of Contents
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don&apos;t simply skip over it entirely.
+              Preschool age songs group by catagories. 
             </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
-            </Stack>
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
@@ -117,7 +106,7 @@ const IndexPage = () => {
                     component="img"
                     sx={{
                       // 16:9
-                      pt: '56.25%',
+                      //pt: '56.25%',
                     }}
                     image= {card.image}
                     alt="random"
@@ -132,7 +121,6 @@ const IndexPage = () => {
                   </CardContent>
                   <CardActions>
                     <Button size="small"> <Link to = '/moningmeeting/'>Let's Go!</Link></Button>
-                    <Button size="small">Edit</Button>
                   </CardActions>
                 </Card>
               </Grid>
