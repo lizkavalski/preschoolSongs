@@ -7,7 +7,16 @@ import data from "../data/tableOfContent.json"
 
 // data
 const cards = data
-const theme =createTheme()
+const theme =createTheme({
+  palette: {
+    primary: {
+      main: "#03a9f4",
+    },
+    secondary: {
+      main: "#ff9100",
+    },
+  },
+})
 // markup
 const IndexPage = () => {
   return (
@@ -66,8 +75,8 @@ const IndexPage = () => {
                       {card.description}
                     </Typography>
                   </CardContent>
-                  <CardActions>
-                    <Button size="small"> <Link to = {card.url}>Let's Go!</Link></Button>
+                  <CardActions align="center" >
+                    <Button size="small" variant="contained" color="secondary"> <Link to = {card.url}>Let's Go!</Link></Button>
                   </CardActions>
                 </Card>
               </Grid>
