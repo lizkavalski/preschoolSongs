@@ -1,0 +1,58 @@
+ [
+  {
+    "text": "Monring Meeting",
+    "url": "/morningmeeting/",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/cupOfCoffee.jpg",
+    "description":"Songs focusing on welcomeing and saying hello to fellow classmates at the begining of the day.",
+    "color": "#E95800"
+  },
+  {
+    "text": "Goodbye Songs",
+    "url": "/goodbye/",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/goodbye.jpg",
+    "description": "Songs for the end of the schoolday",
+    "color": "#1099A8"
+  },
+  {
+    "text": "Clean-up",
+    "url": "https://www.gatsbyjs.com/docs/reference/",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/cleanUp.jpg",
+    "description":"Songs for clean-up",
+    "color": "#BC027F"
+  },
+  {
+    "text": "Weather",
+    "url": "https://www.gatsbyjs.com/docs/conceptual/",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/weather.jpg",
+    "description":"Songs about the weather.",
+    "color": "#0D96F2"
+  },
+  {
+    "text": "Calender",
+    "url": "https://www.gatsbyjs.com/plugins",
+    "image":"https://images.unsplash.com/photo-1630313347909-7f8460bc9035?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHdlZWt8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs related days of the week months, and seasons.",
+    "color": "#8EB814"
+  },
+  {
+    "text": "ABC",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/abc.jpg",
+   "description":"Songs about alphabet",
+    "color":"#663399"
+  },
+  {
+    "text": "Math",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1548175551-1edaea7bbf0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y291bnRpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+   "description":"Songs about numbers and shapes",
+    "color":"#663399"
+  },
+  {
+    "text": "Colors",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1558470598-a5dda9640f68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29sb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+   "description":"Songs about diffent colors",
+    "color":"#663399"
+  }
+]

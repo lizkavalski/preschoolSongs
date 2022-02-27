@@ -2,21 +2,20 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { AppBar, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Stack, Box, Toolbar, Typography, Container, link } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import data from "../data/tableOfContent.json"
+import goodbyeData from "../data/goodbyeSongs.json";
 
+const cards = goodbyeData;
 
-// data
-const cards = data
 const theme =createTheme()
 // markup
-const IndexPage = () => {
+const Goodbye = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <AppBar position="relative">
       <title>Home Page</title>
-      <Typography variant="h1" color="inherit" noWrap align="center"> 
-        Song Book
+      <Typography variant="h1" color="inherit" noWrap>
+        Congratulations
       </Typography>
         <br />
       </AppBar>
@@ -38,11 +37,22 @@ const IndexPage = () => {
               color="text.primary"
               gutterBottom
             >
-              Table of Contents
+              Album layout
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Preschool age songs group by catagories. 
+              Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don&apos;t simply skip over it entirely.
             </Typography>
+            <Stack
+              sx={{ pt: 4 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+              <Button variant="contained"><Link to= '/'>Back to main page</Link> </Button>
+              <Button variant="outlined">Secondary action</Button>
+            </Stack>
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
@@ -55,6 +65,10 @@ const IndexPage = () => {
                 >
                   <CardMedia
                     component="img"
+                    sx={{
+                      // 16:9
+                      pt: '56.25%',
+                    }}
                     image= {card.image}
                     alt={card.text}
                   />
@@ -67,7 +81,8 @@ const IndexPage = () => {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small"> <Link to = {card.url}>Let's Go!</Link></Button>
+                    <Button size="small">View</Button>
+                    <Button size="small">Edit</Button>
                   </CardActions>
                 </Card>
               </Grid>
@@ -79,4 +94,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default Goodbye
