@@ -1,0 +1,122 @@
+ [
+  {
+    "text": "Monring Meeting",
+    "url": "/morningmeeting/",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/cupOfCoffee.jpg",
+    "description":"Songs focusing on welcomeing and saying hello to fellow classmates at the begining of the day.",
+    "color": "#E95800"
+  },
+  {
+    "text": "Goodbye Songs",
+    "url": "/goodbye/",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/goodbye.jpg",
+    "description": "Songs for the end of the schoolday",
+    "color": "#1099A8"
+  },
+  {
+    "text": "Clean-up",
+    "url": "https://www.gatsbyjs.com/docs/reference/",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/cleanUp.jpg",
+    "description":"Songs for clean-up",
+    "color": "#BC027F"
+  },
+  {
+    "text": "Weather",
+    "url": "https://www.gatsbyjs.com/docs/conceptual/",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/weather.jpg",
+    "description":"Songs about the weather.",
+    "color": "#0D96F2"
+  },
+  {
+    "text": "Calender",
+    "url": "https://www.gatsbyjs.com/plugins",
+    "image":"https://images.unsplash.com/photo-1630313347909-7f8460bc9035?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHdlZWt8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs related days of the week months, and seasons.",
+    "color": "#8EB814"
+  },
+  {
+    "text": "ABC",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/abc.jpg",
+   "description":"Songs about alphabet",
+    "color":"#663399"
+  },
+  {
+    "text": "Math",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1548175551-1edaea7bbf0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y291bnRpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+   "description":"Songs about numbers and shapes",
+    "color":"#663399"
+  },
+  {
+    "text": "Colors",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1558470598-a5dda9640f68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29sb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+   "description":"Songs about diffent colors",
+    "color":"#663399"
+  },
+  {
+    "text": "Emotions",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1575278220902-cdf1a07a0421?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZW1vdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+   "description":"Songs that talk about different emotions and feeling",
+    "color":"#663399"
+  },
+  {
+    "text": "Body Parts",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1611784600701-fdb71167b162?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGFuYXRvbXl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+   "description":"Songs that identifiy different body parts",
+    "color":"#663399"
+  },
+  {
+    "text": "Dance/Movements",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZGFuY2UlMjBmYW1pbHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+   "description":"Songs to dance and move to. Great for indoor recess days",
+    "color":"#663399"
+  },
+  {
+    "text": "Apples",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1505872342847-6dbb5e76cd31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGFwcGxlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+   "description":"Songs about apples.",
+    "color":"#663399"
+  },
+  {
+    "text":"Trees",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bGVhdmVzJTIwZmFsbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs about leaves and trees"
+  },
+  {
+    "text":"Pumpkins",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1604905178345-80473d563f41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzV8fHB1bXBraW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs related to pumpkins"
+  },
+  {
+    "text":"Halloween",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1633025094151-6fc996255e28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGhhbGxvd2VlbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs related to Helloween including ghost, monster and many more."
+  },
+  {
+    "text":"Turkey",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1560011961-4ab41261de01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dHVya2V5JTIwYmlyZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs related to turkeys or Thanksgiving."
+  },
+  {
+    "text":"Gingerbread Man",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1536056298178-a36a9ba0b0f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGdpbmdlcmJyZWFkJTIwbWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs about baking and/or stories about the gingerbread man"
+  },
+  {
+    "text":"Snow",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1511131341194-24e2eeeebb09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNub3d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs about snow and winter"
+  }
+]
