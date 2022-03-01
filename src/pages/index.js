@@ -46,7 +46,7 @@ const IndexPage = () => {
           <Container  
             sx={{
               maxWidth:"sm",
-              bgcolor:'rgba(0,0,0,.5)',
+              bgcolor:'rgba(0,0,0,.65)',
               pt: 8,
               pb: 6,
             }}

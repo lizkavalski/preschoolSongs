@@ -136,5 +136,59 @@
     "url":"https://www.gatsbyjs.com/cloud",
     "image":"https://images.unsplash.com/photo-1457545195570-67f207084966?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2ludGVyJTIwY2xvdGhpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     "description":"Songs about clothes worn in the cold. This also includes the story about the Mitten!"
+  },
+  { 
+    "text":"St Patrick Day",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1641803216396-7d82c43e71fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHN0JTIwcGF0cmlja3MlMjBkYXl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs and stories to celabrate St Patrick day"
+  },
+  { 
+    "text":"Earth Day",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1584974292709-5c2f0619971b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZWFydGglMjBkYXl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs about earth day, recycling and taking care of the earth"
+  },
+  { 
+    "text":"Zoo Animals",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1561926985-b79be4fb9f9b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fHpvbyUyMGFuaW1hbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs about wild animals"
+  },
+  { 
+    "text":"Farm Animals",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1516467508483-a7212febe31a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZmFybSUyMGFuaW1hbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs about farm animals"
+  },
+  { 
+    "text":"Insects",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1560263816-d704d83cce0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGluc2VjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs about bugs"
+  },
+  { 
+    "text":"Flowers",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvd2VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs about bugs"
+  },
+  { 
+    "text":"Community Heros",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1504850012971-3dc85a46dc4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGZpcmUlMjBmaWdodGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs about people who help out the community such as police officer, firefigher, and many more"
+  },
+  { 
+    "text":"Beach",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2h8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs about beaches, fish and ocean"
+  },
+  { 
+    "text":"Dinosaurs",
+    "url":"https://www.gatsbyjs.com/cloud",
+    "image":"https://images.unsplash.com/photo-1584844115436-473887b1e327?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGRpbm9zYXVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "description":"Songs about Dinosaurs"
   }
 ]
