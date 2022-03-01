@@ -2,7 +2,8 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { AppBar, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Stack, Box, Toolbar, Typography, Container, link } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import data from "../data/tableOfContent.json"
+import data from "../data/tableOfContent.json";
+import heroImage from "../images/classroom.jpg"
 
 
 // data
@@ -13,6 +14,7 @@ const theme =createTheme({
       main: "#03a9f4",
     },
     secondary: {
+      light:"#fff3e0",
       main: "#ff9100",
     },
   },
@@ -33,23 +35,32 @@ const IndexPage = () => {
             {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: 'background.paper',
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             pt: 8,
             pb: 6,
             border: '1px dashed grey'
           }}
         >
-          <Container maxWidth="sm">
+          <Container  
+            sx={{
+              maxWidth:"sm",
+              bgcolor:'rgba(0,0,0,.65)',
+              pt: 8,
+              pb: 6,
+            }}
+          >
             <Typography
               component="h1"
               variant="h2"
               align="center"
-              color="text.primary"
+              color="secondary.light"
               gutterBottom
             >
               Table of Contents
             </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            <Typography variant="h5" align="center" color="secondary.light" paragraph>
               Preschool age songs group by catagories. 
             </Typography>
           </Container>
