@@ -6,8 +6,7 @@ import monringData from "../data/moningSongs.json";
 import heroImage from "../images/classroom.jpg"
 
 
-const cards = monringData;
-
+const songs = monringData;
 
 const theme =createTheme({
   palette: {
@@ -43,7 +42,7 @@ const MorningMeeting = () => {
           pb: 6,
           border: '1px dashed grey'
         }}
-      >
+        >
         <Container  
           sx={{
             maxWidth:"sm",
@@ -51,14 +50,14 @@ const MorningMeeting = () => {
             pt: 8,
             pb: 6,
           }}
-        >
+          >
           <Typography
             component="h1"
             variant="h2"
             align="center"
             color="secondary.light"
             gutterBottom
-          >
+            >
               Good Morning Meeting
             </Typography>
             <Typography variant="h5" align="center" color="secondary.light" paragraph>
@@ -69,7 +68,7 @@ const MorningMeeting = () => {
               direction="row"
               spacing={2}
               justifyContent="center"
-            >
+              >
               <Button variant="contained"><Link to= '/'>Back to main page</Link> </Button>
               <Button variant="outlined">Secondary action</Button>
             </Stack>
@@ -78,30 +77,28 @@ const MorningMeeting = () => {
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+            {songs.map((song) => (
+              <Grid item key={song} xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                >
+                  >
                   <CardMedia
                     component="img"
-                    image= {card.image}
-                    alt={card.text}
-                  />
+                    image= {song.image}
+                    alt={song.title}
+                    />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      {card.category}
+                      {song.title}
                     </Typography>
                     <Typography>
-                      {card.by}
+                      by {song.by}
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" onClick={ event => {
-                      event.preventDefault()
-                      navigate(card.url)}}
-                       >
+                    <Button size="small"><Link to = "/video/" state={{url:song.video, title:song.title}}>
                          View
+                        </Link>
                     </Button>
                     <Button size="small">Edit</Button>
                   </CardActions>
@@ -114,5 +111,5 @@ const MorningMeeting = () => {
       </ThemeProvider>
   )
 }
-
 export default MorningMeeting
+console.log('this is songs', songs)

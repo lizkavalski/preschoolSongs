@@ -4,13 +4,13 @@
     "by":"Super Simple Songs-Kids Songs",
     "category":"Morning Meeting",
     "image":"https://via.placeholder.com/150x100",
-    "url":"https://www.youtube.com/watch?v=fN1Cyr0ZK9M"
+    "video":"https://www.youtube.com/embed/fN1Cyr0ZK9M"
   },
   {
     "title":"Hello Song",
     "by":"The Singing Walrus",
     "category":"Morning Meeting",
     "image":"https://via.placeholder.com/150x100",
-    "url":"https://www.youtube.com/watch?v=gghDRJVxFxU"
+    "video":"https://www.youtube.com/embed/gghDRJVxFxU"
   }
 ]
