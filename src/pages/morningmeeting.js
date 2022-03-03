@@ -25,7 +25,7 @@ const MorningMeeting = () => {
     <ThemeProvider theme={theme}>
     <CssBaseline />
     <AppBar position="relative">
-    <title>Home Page</title>
+    <title>Hello Meeting Page</title>
     <Typography variant="h1" color="inherit" noWrap align="center"> 
       Song Book
     </Typography>

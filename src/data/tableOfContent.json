@@ -1,4 +1,5 @@
- [
+{
+  "categories":[
   {
     "text": "Monring Meeting",
     "url": "/morningmeeting/",
@@ -38,49 +39,49 @@
     "text": "ABC",
     "url":"https://www.gatsbyjs.com/cloud",
     "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/abc.jpg",
-   "description":"Songs about alphabet",
+    "description":"Songs about alphabet",
     "color":"#663399"
   },
   {
     "text": "Math",
     "url":"https://www.gatsbyjs.com/cloud",
     "image":"https://images.unsplash.com/photo-1548175551-1edaea7bbf0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y291bnRpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-   "description":"Songs about numbers and shapes",
+    "description":"Songs about numbers and shapes",
     "color":"#663399"
   },
   {
     "text": "Colors",
     "url":"https://www.gatsbyjs.com/cloud",
     "image":"https://images.unsplash.com/photo-1558470598-a5dda9640f68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29sb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-   "description":"Songs about diffent colors",
+    "description":"Songs about diffent colors",
     "color":"#663399"
   },
   {
     "text": "Emotions",
     "url":"https://www.gatsbyjs.com/cloud",
     "image":"https://images.unsplash.com/photo-1575278220902-cdf1a07a0421?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZW1vdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-   "description":"Songs that talk about different emotions and feeling",
+    "description":"Songs that talk about different emotions and feeling",
     "color":"#663399"
   },
   {
     "text": "Body Parts",
     "url":"https://www.gatsbyjs.com/cloud",
     "image":"https://images.unsplash.com/photo-1611784600701-fdb71167b162?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGFuYXRvbXl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-   "description":"Songs that identifiy different body parts",
+    "description":"Songs that identifiy different body parts",
     "color":"#663399"
   },
   {
     "text": "Dance/Movements",
     "url":"https://www.gatsbyjs.com/cloud",
     "image":"https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZGFuY2UlMjBmYW1pbHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-   "description":"Songs to dance and move to. Great for indoor recess days",
+    "description":"Songs to dance and move to. Great for indoor recess days",
     "color":"#663399"
   },
   {
     "text": "Apples",
     "url":"https://www.gatsbyjs.com/cloud",
     "image":"https://images.unsplash.com/photo-1505872342847-6dbb5e76cd31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGFwcGxlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-   "description":"Songs about apples.",
+    "description":"Songs about apples.",
     "color":"#663399"
   },
   {
@@ -192,3 +193,4 @@
     "description":"Songs about Dinosaurs"
   }
 ]
+}
