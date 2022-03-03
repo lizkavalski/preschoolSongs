@@ -76,11 +76,11 @@ const IndexPage = () => {
                   <CardMedia
                     component="img"
                     image= {card.image}
-                    alt={card.text}
+                    alt={card.category}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      {card.text}
+                      {card.category}
                     </Typography>
                     <Typography>
                       {card.description}

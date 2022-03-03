@@ -8,6 +8,7 @@ import heroImage from "../images/classroom.jpg"
 
 const songs = monringData;
 
+
 const theme =createTheme({
   palette: {
     primary: {
@@ -26,6 +27,7 @@ const MorningMeeting = () => {
     <CssBaseline />
     <AppBar position="relative">
     <title>Hello Meeting Page</title>
+
     <Typography variant="h1" color="inherit" noWrap align="center"> 
       Song Book
     </Typography>
@@ -43,6 +45,7 @@ const MorningMeeting = () => {
           border: '1px dashed grey'
         }}
         >
+
         <Container  
           sx={{
             maxWidth:"sm",
@@ -51,6 +54,7 @@ const MorningMeeting = () => {
             pb: 6,
           }}
           >
+
           <Typography
             component="h1"
             variant="h2"
@@ -58,6 +62,7 @@ const MorningMeeting = () => {
             color="secondary.light"
             gutterBottom
             >
+
               Good Morning Meeting
             </Typography>
             <Typography variant="h5" align="center" color="secondary.light" paragraph>
@@ -99,6 +104,7 @@ const MorningMeeting = () => {
                     <Button size="small"><Link to = "/video/" state={{url:song.video, title:song.title}}>
                          View
                         </Link>
+
                     </Button>
                     <Button size="small">Edit</Button>
                   </CardActions>
