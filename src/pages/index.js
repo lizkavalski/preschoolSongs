@@ -2,12 +2,14 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { AppBar, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Stack, Box, Toolbar, Typography, Container, link } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import data from "../data/tableOfContent.json";
+import dataCategories from "../data/categories.json";
+import dataSongs from "../data/songs.json"; 
 import heroImage from "../images/classroom.jpg"
 
-
 // data
-const cards = data
+const cards = dataCategories;
+const songs = dataSongs;
+
 const theme =createTheme({
   palette: {
     primary: {
@@ -19,6 +21,7 @@ const theme =createTheme({
     },
   },
 })
+
 // markup
 const IndexPage = () => {
   return (
@@ -68,7 +71,7 @@ const IndexPage = () => {
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.categories.map((card) => (
+            {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
@@ -76,18 +79,18 @@ const IndexPage = () => {
                   <CardMedia
                     component="img"
                     image= {card.image}
-                    alt={card.text}
+                    alt={card.title}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      {card.text}
+                      {card.title}
                     </Typography>
                     <Typography>
                       {card.description}
                     </Typography>
                   </CardContent>
                   <CardActions align="center" >
-                    <Button size="small" variant="contained" color="secondary"> <Link to = {card.url}>Let's Go!</Link></Button>
+                    <Button size="small" variant="contained" color="secondary"> <Link to = "/currentCat/" state={{title:card.title,description:card.description, category:card.category}}>Let's Go!</Link></Button>
                   </CardActions>
                 </Card>
               </Grid>

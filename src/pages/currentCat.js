@@ -2,11 +2,11 @@ import * as React from "react";
 import { Link ,navigate} from "gatsby";
 import { AppBar, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Stack, Box, Toolbar, Typography, Container, link } from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import monringData from "../data/moningSongs.json";
+import dataSongs from "../data/songs.json"; 
 import heroImage from "../images/classroom.jpg"
 
 
-const songs = monringData;
+const songs = dataSongs;
 
 const theme =createTheme({
   palette: {
@@ -20,12 +20,22 @@ const theme =createTheme({
   },
 })
 // markup
-const MorningMeeting = () => {
+const currentCat = ({location}) => {
+  let current = (location.state.category);
+  
+  let selectedCategory= (category)=>{
+  console.log('line 11', category)
+  let findSongs = songs.filter(song => song.category === category)
+  console.log("line 13:", findSongs)
+  return findSongs
+  }
+
+console.log("this is the way", selectedCategory(current))
   return (
     <ThemeProvider theme={theme}>
     <CssBaseline />
     <AppBar position="relative">
-    <title>Hello Meeting Page</title>
+    <title>{location.state.title}</title>
     <Typography variant="h1" color="inherit" noWrap align="center"> 
       Song Book
     </Typography>
@@ -58,7 +68,7 @@ const MorningMeeting = () => {
             color="secondary.light"
             gutterBottom
             >
-              Good Morning Meeting
+              {location.state.title}
             </Typography>
             <Typography variant="h5" align="center" color="secondary.light" paragraph>
             Songs focusing on welcomeing and saying hello to fellow classmates at the begining of the day
@@ -75,9 +85,10 @@ const MorningMeeting = () => {
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
-          {/* End hero unit */}
           <Grid container spacing={4}>
-            {songs.map((song) => (
+
+            {
+            (selectedCategory(current).map((song) => (
               <Grid item key={song} xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
@@ -104,12 +115,11 @@ const MorningMeeting = () => {
                   </CardActions>
                 </Card>
               </Grid>
-            ))}
+            )))}
           </Grid>
         </Container>
         </main>
       </ThemeProvider>
   )
 }
-export default MorningMeeting
-console.log('this is songs', songs)
+export default currentCat;
