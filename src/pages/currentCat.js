@@ -5,7 +5,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import dataSongs from "../data/songs.json"; 
 import heroImage from "../images/classroom.jpg"
 
-
 const songs = dataSongs;
 
 const theme =createTheme({
