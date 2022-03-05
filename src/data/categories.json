@@ -1,0 +1,15 @@
+
+[
+  {
+    "category":"Monring-Meeting",
+    "title":"Greeting",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/cupOfCoffee.jpg",
+    "description":"Songs focusing on welcomeing and saying hello to fellow classmates at the begining of the day."
+  },
+  {
+    "category": "Goodbye-Songs",
+    "title":"Goodbye Songs",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/contents/goodbye.jpg",
+    "description": "Songs for the end of the schoolday"
+  }
+]
