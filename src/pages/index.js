@@ -90,7 +90,7 @@ const IndexPage = () => {
                     </Typography>
                   </CardContent>
                   <CardActions align="center" >
-                    <Button size="small" variant="contained" color="secondary"> <Link to = "/currentCat/" state={{title:card.title,description:card.description, category:card.category}}>Let's Go!</Link></Button>
+                    <Button size="small" variant="contained" color="secondary"> <Link to = "/currentCat/" state={{title:card.title, description:card.description, category:card.category}}>Veiw Songs!</Link></Button>
                   </CardActions>
                 </Card>
               </Grid>

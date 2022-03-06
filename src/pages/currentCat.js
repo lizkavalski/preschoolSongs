@@ -70,7 +70,7 @@ console.log("this is the way", selectedCategory(current))
               {location.state.title}
             </Typography>
             <Typography variant="h5" align="center" color="secondary.light" paragraph>
-            Songs focusing on welcomeing and saying hello to fellow classmates at the begining of the day
+              {location.state.description}
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -106,11 +106,10 @@ console.log("this is the way", selectedCategory(current))
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small"><Link to = "/video/" state={{url:song.video, title:song.title}}>
-                         View
+                    <Button size="small"><Link to = "/video/" state={{url:song.video, title:song.title, category:location.state.title}}>
+                         View Video
                         </Link>
                     </Button>
-                    <Button size="small">Edit</Button>
                   </CardActions>
                 </Card>
               </Grid>
