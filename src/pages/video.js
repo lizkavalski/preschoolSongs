@@ -19,34 +19,39 @@ const ViewVideo =({location})=>{
     <ThemeProvider theme={theme}>
     <CssBaseline />
     <AppBar position="relative">
-    <title>Home Page</title>
+    <title>Video Page</title>
     <Typography variant="h4" color="inherit" noWrap align="center" paddingTop={2}> 
       {location.state.title}
     </Typography>
       <br />
     </AppBar>
-    <Box
-      sx={{
-        bgcolor:'rgba(221,0,255,1)',
-        pt: 8,
-        pb: 6,
-        border: '1px dashed grey'
-      }}
-      >
-
+    <Stack
+        sx={{ pt: 4 }}
+        direction="row"
+        spacing={2}
+        justifyContent="center"
+        >
+        <Button variant="contained"><Link to= '/'>Back to Table of Contant</Link> </Button>
+        <Button variant="outlined" onClick={() => navigate(-1)}> Back to {location.state.category} </Button>
+      </Stack>
     <Container  
           sx={{
             maxWidth:"sm",
-            bgcolor:'rgba(0,0,0,.65)',
-            pt: 8,
-            pb: 6,
           }}
           >
       <Box align="center" paddingTop={2} >
-          <iframe width="660" height="415" align="center" src={location.state.url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <CardMedia 
+          component= "iframe"  
+          width={560}
+          height={560}
+          src={location.state.url} 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen= "allowfullscreen"
+          />
       </Box>
       </Container>
-      </Box>
     </ThemeProvider>
   )
 }
