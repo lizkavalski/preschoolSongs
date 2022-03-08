@@ -4,41 +4,62 @@
     "by":"Super Simple Songs-Kids Songs",
     "category":"Monring-Meeting",
     "image":"https://via.placeholder.com/150x100",
-    "video":"https://www.youtube.com/embed/fN1Cyr0ZK9M"
+    "video":"https://www.youtube-nocookie.com/embed/fN1Cyr0ZK9M"
   },
   {
     "title":"Hello Song",
     "by":"The Singing Walrus",
     "category":"Monring-Meeting",
     "image":"https://via.placeholder.com/150x100",
-    "video":"https://www.youtube.com/embed/gghDRJVxFxU"
+    "video":"https://www.youtube-nocookie.com/embed/gghDRJVxFxU"
   },
   {
     "title":"Goodbye Song",
     "by":"The Singing Walrus",
     "category":"Goodbye-Songs",
     "image":"https://via.placeholder.com/150x100",
-    "video":"https://www.youtube.com/embed/0LDArAJf7-c"
+    "video":"https://www.youtube-nocookie.com/embed/0LDArAJf7-c"
   },
   {
     "title":"Hello!",
     "by":"Super Simple Songs-Kids Songs",
     "category":"Monring-Meeting",
     "image":"https://via.placeholder.com/150x100",
-    "video":"https://www.youtube.com/embed/tVlcKp3bWH8"
+    "video":"https://www.youtube-nocookie.com/embed/tVlcKp3bWH8"
   },
   {
     "title":"Hello Song for Children!",
     "by":"Miss Linky- Educational Videos",
     "category":"Monring-Meeting",
     "image":"https://via.placeholder.com/150x100",
-    "video":"https://www.youtube.com/embed/pqDEwPi7vxg"
+    "video":"https://www.youtube-nocookie.com/embed/pqDEwPi7vxg"
   },
   {
     "title":"Hello Hello How Are You!",
     "by":"The Kiboomers",
     "category":"Monring-Meeting",
     "image":"https://via.placeholder.com/150x100",
-    "video":"https://www.youtube.com/embed/x23rTDl4AMs"
+    "video":"https://www.youtube-nocookie.com/embed/x23rTDl4AMs"
+  },
+  {
+    "title":"Bye Bye Goodbye",
+    "by":"Super Simple Songs-Kids Songs",
+    "category":"Goodbye-Songs",
+    "image":"https://via.placeholder.com/150x100",
+    "video":"https://www.youtube-nocookie.com/embed/PraN5ZoSjiY"
+  },
+  {
+    "title":"Goodbye Song for Children",
+    "by":"The Learning Station",
+    "category":"Goodbye-Songs",
+    "image":"https://via.placeholder.com/150x100",
+    "video":"https://www.youtube-nocookie.com/embed/sGT9hjGcA10"
+  },
+  {
+    "title":"See you Later Alligator",
+    "by":"The Kiboomers",
+    "category":"Goodbye-Songs",
+    "image":"https://via.placeholder.com/150x100",
+    "video":"https://www.youtube-nocookie.com/embed/sGT9hjGcA10"
   }
 ]
