@@ -10,6 +10,7 @@ import heroImage from "../images/classroom.jpg"
 const cards = dataCategories;
 const songs = dataSongs;
 
+console.log("this is how many", cards.length)
 const theme =createTheme({
   palette: {
     primary: {
