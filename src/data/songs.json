@@ -94,7 +94,21 @@
     "title":"What's the Weather Like Today",
     "by":"The Kiboomers",
     "category":"Weather",
-    "image":"https://lizkavalski.github.io/imageStorage/songbook/songs/hello.png",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/songs/weather2.png",
     "video":"https://www.youtube.com/embed/KUSbazn3STo"
+  },
+  {
+    "title":"Drip Drop Rain",
+    "by":"Dance'n Beats Lab",
+    "category":"Weather",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/songs/rain.png",
+    "video":"https://www.youtube.com/embed/3WIF98ss2Tw"
+  },
+  {
+    "title":"Rain, Rain, Go Away",
+    "by":"The Singing Walrus",
+    "category":"Weather",
+    "image":"https://lizkavalski.github.io/imageStorage/songbook/songs/rain1.png",
+    "video":"https://www.youtube.com/embed/HRJUGl1a1t8"
   }
 ]
