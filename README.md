@@ -1,3 +1,3 @@
 ## Preschool Song Book
 
-Created to store and play preschool songs
+A libary of songs used for a Developmentty preschool
