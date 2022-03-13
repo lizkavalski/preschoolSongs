@@ -1,0 +1,14 @@
+<section class="categories">
+  <h2>Categories</h2>
+    <div *ngFor="let category of categories">
+      <div class="card">
+        <div class = "container">
+          <img [src]="category.image">
+          <h3 class="title">{{category.title}}</h3>
+          <p class="description">{{category.description}}</p>
+          <button type="button" routerlink="/songs"> View songs</button>
+        </div>
+      </div>
+    </div>
+</section>
+

@@ -1,0 +1,39 @@
+html { font-size: 22px; }
+body { padding: 1rem; }
+
+img {
+  max-width: 20em;
+  max-height: 15em;
+  border-radius: .5em .5em 0 0;
+}
+
+.categories{
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 30em));
+  grid-gap: 3em;
+}
+.card {
+  grid-column-end: span 4;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #9494ff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+}
+.container{
+  padding: 1em;
+  max-width: 20em;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
