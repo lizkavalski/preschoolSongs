@@ -15,6 +15,7 @@ const theme =createTheme({
   },
 })
 const ViewVideo =({location})=>{
+  
   return(
     <ThemeProvider theme={theme}>
     <CssBaseline />

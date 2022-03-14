@@ -79,7 +79,6 @@ console.log("this is the way", selectedCategory(current))
               justifyContent="center"
               >
               <Button variant="contained"><Link to= '/'>Back to main page</Link> </Button>
-              <Button variant="outlined">Secondary action</Button>
             </Stack>
           </Container>
         </Box>
@@ -106,7 +105,7 @@ console.log("this is the way", selectedCategory(current))
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small"><Link to = "/video/" state={{url:song.video, title:song.title, category:location.state.title}}>
+                    <Button size="small"><Link to = "/" state={{url:song.video, title:song.title, category:location.state.title}}>
                          View Video
                         </Link>
                     </Button>
