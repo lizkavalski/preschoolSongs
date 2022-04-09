@@ -1,20 +1,10 @@
-import * as React from 'react';
-import {useState} from 'react'
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
+import React, {useState, useEffect} from 'react';
+import {Link,} from "react-router-dom";
+import {Button, Card, CardActions,CardContent,CardMedia, CssBaseline, Grid, Box, Typography, Container} from '@mui/material/';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import data from '../../data/categories.json'
-import heroImage from '../classroom.jpg'
+import heroImage from '../classroom.jpg';
+import Songs from '../songs/songs.js'
 
 
 
@@ -30,17 +20,28 @@ const theme = createTheme({
   },
 });
 
+
+
+
+
 const Categories=()=> {
-  const cards = data;
-  const [card, setCard]= useState(cards)
 
-  const selectedCard=(card)=>{
-    console.log("this is line 38", card);
-    setCard(card);
-    console.log('this is line 40', card);
-  };
+  // return (
+  //   <div>
+  //     <h1>This is the home page</h1>
+  //     <Link to="songs">view songs</Link>
+  //   </div>
+  // );
+  const [selectedCard, setSelectedCard] = useState(data)
+  let cards= selectedCard
 
+  // let pickedCard=({card})=>{
+  //  let newData={card};
+  //  console.log("this is the data", newData);
+  //  return newData
+  //  }
   
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -75,14 +76,15 @@ const Categories=()=> {
              Welcome
             </Typography>
             <Typography variant="h5" align="center" color="secondary.light" paragraph>
-              A place to find songs 
+              Please select a category
             </Typography>
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
+            {
+              cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
@@ -101,7 +103,25 @@ const Categories=()=> {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" onClick={()=> selectedCard(card)}>View Songs</Button>
+                   
+                    {/* <Button size="small" >
+                      <Link>
+                        View Songs
+                      </Link>
+                    </Button> */}
+                  <div>
+                    <Link to={{
+                      pathname:"songs",
+                      selectedCard
+                      :{
+                        image:card.image,
+                        title:card.title,
+                        category:card.category,
+                        description: card.description
+                      }
+                    }} >view songs</Link>
+                   </div>
+                  
                   </CardActions>
                 </Card>
               </Grid>
@@ -111,6 +131,9 @@ const Categories=()=> {
       </main>
     </ThemeProvider>
   );
+
+
+
 }
 
 export default Categories;

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useLocation, Link } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -6,20 +7,44 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
+
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import songData from '../../data/songs.json';
 
+let songs= songData
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#03a9f4",
+    },
+    secondary: {
+      light:"#fff3e0",
+      main: "#ff9100",
+    },
+  },
+});
 
-const theme = createTheme();
-
-const Songs = props=> {
-  const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const Songs = props => {
+//   return (
+//     <div>
+//         <h1>This is the Song page</h1>
+//         <Link to='/'> back Home</Link>
+//     </div>
+// )
+  let current =  props.location || {};
+  console.log('this is current', current)
+  
+  let selectedCategory= (current)=>{
+    console.log('line 11 in songs', current.category)
+    let findSongs = songs.filter(song => song.category === current.category)
+    console.log("In songs.js line 13:", findSongs)
+    return findSongs
+  }
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -28,66 +53,60 @@ const Songs = props=> {
         {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: 'background.paper',
+            backgroundImage: `url(${current.image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             pt: 8,
             pb: 6,
+            border: '1px dashed grey'
           }}
         >
-          <Container maxWidth="sm">
+          <Container 
+            sx={{
+              maxWidth:"sm",
+              bgcolor:'rgba(0,0,0,.65)',
+              pt: 8,
+              pb: 6,
+              }}
+            >
             <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="text.primary"
-              gutterBottom
+               component="h1"
+               variant="h2"
+               align="center"
+               color="secondary.light"
+               gutterBottom
             >
-              Album layout
+             Welcome
             </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don&apos;t simply skip over it entirely.
+            <Typography variant="h5" align="center" color="secondary.light" paragraph>
+              A place to find songs 
+              <Link to='/'> back Home</Link>
             </Typography>
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
-            </Stack>
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
+            {selectedCategory(current).map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
                   <CardMedia
                     component="img"
-                    sx={{
-                      // 16:9
-                      pt: '56.25%',
-                    }}
-                    image="https://source.unsplash.com/random"
-                    alt="random"
+                    image={card.image}
+                    alt={card.title}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      {card.title}
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
+                      {card.description}
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                    <Button size="small">View video</Button>
                   </CardActions>
                 </Card>
               </Grid>
