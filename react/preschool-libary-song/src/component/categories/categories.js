@@ -111,8 +111,8 @@ const Categories=()=> {
                     </Button> */}
                   <div>
                     <Link to={{
-                      pathname:"songs",
-                      selectedCard
+                      pathname:`/${card.category}`,
+                      card
                       :{
                         image:card.image,
                         title:card.title,

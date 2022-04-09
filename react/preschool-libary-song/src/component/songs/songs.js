@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useParams } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -29,19 +29,15 @@ const theme = createTheme({
   },
 });
 
-const Songs = props => {
-//   return (
-//     <div>
-//         <h1>This is the Song page</h1>
-//         <Link to='/'> back Home</Link>
-//     </div>
-// )
-  let current =  props.location || {};
-  console.log('this is current', current)
+const Songs = (card) => {
+   const{category}= useParams()
+  // let location = useLocation()
+  // let current =  card.location || {};
+  // console.log('this is current', current)
   
-  let selectedCategory= (current)=>{
-    console.log('line 11 in songs', current.category)
-    let findSongs = songs.filter(song => song.category === current.category)
+  let selectedCategory= (category)=>{
+    console.log('line 11 in songs', category)
+    let findSongs = songs.filter(song => song.category === category)
     console.log("In songs.js line 13:", findSongs)
     return findSongs
   }
@@ -53,7 +49,7 @@ const Songs = props => {
         {/* Hero unit */}
         <Box
           sx={{
-            backgroundImage: `url(${current.image})`,
+            backgroundImage: `url(${category.image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             pt: 8,
@@ -76,7 +72,7 @@ const Songs = props => {
                color="secondary.light"
                gutterBottom
             >
-             Welcome
+             {category}
             </Typography>
             <Typography variant="h5" align="center" color="secondary.light" paragraph>
               A place to find songs 
@@ -87,7 +83,7 @@ const Songs = props => {
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {selectedCategory(current).map((card) => (
+            {selectedCategory(category).map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
