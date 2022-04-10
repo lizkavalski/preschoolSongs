@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Link,useLocation} from "react-router-dom";
+import {Link,useLocation, useNavigate} from "react-router-dom";
 import { Box, CardMedia, CssBaseline, AppBar, Button, Typography, Container, Stack} from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -15,12 +15,16 @@ const theme =createTheme({
   },
 })
 const ViewVideo =()=>{
-const location = useLocation();
+  const location = useLocation();
+  let navigate = useNavigate();
+
   const title = location.state.title;
   const category = location.state.category
-  // let {category} = useParams();
-  console.log('this is location', location)
   let video = location.state.video
+  
+  function handleClick() {
+    navigate(-1)
+  }
   return(
     <ThemeProvider theme={theme}>
     <CssBaseline />
@@ -38,7 +42,7 @@ const location = useLocation();
         justifyContent="center"
         >
         <Button variant="contained"><Link to= '/'>Back to Table of Contant</Link> </Button>
-        <Button variant="outlined"> Back to {category}</Button>
+        <Button variant="outlined" onClick={handleClick}> Back to {category}</Button>
       </Stack>
     <Container  
           sx={{
