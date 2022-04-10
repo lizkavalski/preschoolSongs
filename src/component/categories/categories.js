@@ -1,12 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {Link,} from "react-router-dom";
-import {Button, Card, CardActions,CardContent,CardMedia, CssBaseline, Grid, Box, Typography, Container} from '@mui/material';
+import {Card, CardActions,CardContent,CardMedia, CssBaseline, Grid, Box, Typography, Container} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import data from '../../data/categories.json'
 import heroImage from '../classroom.jpg';
-import Songs from '../songs/songs.js'
-
-
 
 const theme = createTheme({
   palette: {
@@ -32,7 +29,7 @@ const Categories=()=> {
   //     <Link to="songs">view songs</Link>
   //   </div>
   // );
-  const [selectedCard, setSelectedCard] = useState(data)
+  const [selectedCard] = useState(data)
   let cards= selectedCard
 
   // let pickedCard=({card})=>{
