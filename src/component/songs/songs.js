@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Link, useParams } from "react-router-dom";
+import {Link, useLocation } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -12,11 +12,9 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
 import songData from '../../data/songs.json';
-import catData from '../../data/categories.json'
+
 let songs= songData
-let cats = catData
 
 const theme = createTheme({
   palette: {
@@ -31,16 +29,11 @@ const theme = createTheme({
 });
 
 const Songs = () => {
-   const{category}= useParams()
-  // let location = useLocation()
-  // let current =  card.location || {};
-  // console.log('this is current', current)
-  let findCatitems= ({category})=>{
-    console.log('line 39 in songs', category)
-    let findCats = cats.filter(cat => cat.category === category)
-    console.log("In songs.js line 43:", findCats)
-    return findCats[0];
-  };
+  let location = useLocation();
+  const category= location.state.category;
+  const image = location.state.image;
+  const title = location.state.title;
+  const description = location.state.description;
 
   let selectedCategory= ()=>{
     console.log('line 11 in songs', category)
@@ -57,7 +50,7 @@ const Songs = () => {
         {/* Hero unit */}
         <Box
           sx={{
-            backgroundImage: `url(${findCatitems({category}).image})`,
+            backgroundImage: `url(${image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             pt: 8,
@@ -80,12 +73,12 @@ const Songs = () => {
                color="secondary.light"
                gutterBottom
             >
-             {findCatitems({category}).title}
+             {title}
             </Typography>
             <Typography variant="h5" align="center" color="secondary.light" paragraph>
-            {findCatitems({category}).description}
+            {description}
             </Typography>
-            <Button size="small" variant="contained">
+            <Button size="small" variant="contained" color='secondary'>
               <Link to='/'> back Home</Link>
             </Button>
           </Container>
