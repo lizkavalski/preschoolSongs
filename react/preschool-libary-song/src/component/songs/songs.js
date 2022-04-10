@@ -14,8 +14,9 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import songData from '../../data/songs.json';
-
+import catData from '../../data/categories.json'
 let songs= songData
+let cats = catData
 
 const theme = createTheme({
   palette: {
@@ -34,13 +35,20 @@ const Songs = (card) => {
   // let location = useLocation()
   // let current =  card.location || {};
   // console.log('this is current', current)
-  
+  let findCatitems= ({category})=>{
+    console.log('line 39 in songs', category)
+    let findCats = cats.filter(cat => cat.category === category)
+    console.log("In songs.js line 43:", findCats)
+    return findCats[0];
+  };
+
   let selectedCategory= (category)=>{
     console.log('line 11 in songs', category)
     let findSongs = songs.filter(song => song.category === category)
     console.log("In songs.js line 13:", findSongs)
     return findSongs
-  }
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -49,7 +57,7 @@ const Songs = (card) => {
         {/* Hero unit */}
         <Box
           sx={{
-            backgroundImage: `url(${category.image})`,
+            backgroundImage: `url(${findCatitems({category}).image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             pt: 8,
@@ -72,12 +80,14 @@ const Songs = (card) => {
                color="secondary.light"
                gutterBottom
             >
-             {category}
+             {findCatitems({category}).title}
             </Typography>
             <Typography variant="h5" align="center" color="secondary.light" paragraph>
-              A place to find songs 
-              <Link to='/'> back Home</Link>
+            {findCatitems({category}).description}
             </Typography>
+            <Button size="small" variant="contained">
+              <Link to='/'> back Home</Link>
+            </Button>
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
