@@ -30,7 +30,7 @@ const theme = createTheme({
   },
 });
 
-const Songs = (card) => {
+const Songs = () => {
    const{category}= useParams()
   // let location = useLocation()
   // let current =  card.location || {};
@@ -42,7 +42,7 @@ const Songs = (card) => {
     return findCats[0];
   };
 
-  let selectedCategory= (category)=>{
+  let selectedCategory= ()=>{
     console.log('line 11 in songs', category)
     let findSongs = songs.filter(song => song.category === category)
     console.log("In songs.js line 13:", findSongs)
@@ -112,7 +112,18 @@ const Songs = (card) => {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View video</Button>
+                    <Button size="small">
+                      <Link 
+                      to={`/${card.category}/${card.title}`}
+                      state={{
+                        category:card.category,
+                        title:card.title,
+                        video: card.video
+                      }}
+                      >
+                        View video
+                      </Link>
+                    </Button>
                   </CardActions>
                 </Card>
               </Grid>
