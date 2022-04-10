@@ -14,14 +14,15 @@ const theme =createTheme({
     },
   },
 })
-const ViewVideo =({location})=>{
+const ViewVideo =(props)=>{
+  
   return(
     <ThemeProvider theme={theme}>
     <CssBaseline />
     <AppBar position="relative">
     <title>Video Page</title>
     <Typography variant="h4" color="inherit" noWrap align="center" paddingTop={2}> 
-      {location.state.title}
+      {props.title}
     </Typography>
       <br />
     </AppBar>
@@ -32,7 +33,7 @@ const ViewVideo =({location})=>{
         justifyContent="center"
         >
         <Button variant="contained"><Link to= '/'>Back to Table of Contant</Link> </Button>
-        <Button variant="outlined" onClick={() => navigate(-1)}> Back to {location.state.category} </Button>
+        <Button variant="outlined" onClick={() => navigate(-1)}> Back to {props.category} </Button>
       </Stack>
     <Container  
           sx={{
@@ -44,7 +45,7 @@ const ViewVideo =({location})=>{
           component= "iframe"  
           width={560}
           height={560}
-          src={location.state.url} 
+          src={props.url} 
           title="YouTube video player" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

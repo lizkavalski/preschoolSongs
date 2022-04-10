@@ -19,8 +19,8 @@ const theme =createTheme({
   },
 })
 // markup
-const currentCat = ({location}) => {
-  let current = (location.state.category);
+const currentCat = (props) => {
+  let current = (props.category);
   
   let selectedCategory= (category)=>{
   console.log('line 11', category)
@@ -30,11 +30,12 @@ const currentCat = ({location}) => {
   }
 
 console.log("this is the way", selectedCategory(current))
+let state=''
   return (
     <ThemeProvider theme={theme}>
     <CssBaseline />
     <AppBar position="relative">
-    <title>{location.state.title}</title>
+    <title>{props.title}</title>
     <Typography variant="h1" color="inherit" noWrap align="center"> 
       Song Book
     </Typography>
@@ -67,10 +68,10 @@ console.log("this is the way", selectedCategory(current))
             color="secondary.light"
             gutterBottom
             >
-              {location.state.title}
+              {props.title}
             </Typography>
             <Typography variant="h5" align="center" color="secondary.light" paragraph>
-              {location.state.description}
+              {props.description}
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -79,7 +80,6 @@ console.log("this is the way", selectedCategory(current))
               justifyContent="center"
               >
               <Button variant="contained"><Link to= '/'>Back to main page</Link> </Button>
-              <Button variant="outlined">Secondary action</Button>
             </Stack>
           </Container>
         </Box>
@@ -106,7 +106,7 @@ console.log("this is the way", selectedCategory(current))
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small"><Link to = "/video/" state={{url:song.video, title:song.title, category:location.state.title}}>
+                    <Button size="small"><Link to = "/video" state={{url:song.video, title:song.title, category:props.title}}>
                          View Video
                         </Link>
                     </Button>
