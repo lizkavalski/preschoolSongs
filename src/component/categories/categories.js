@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link,} from "react-router-dom";
-import {Card, CardActions,CardContent,CardMedia, CssBaseline, Grid, Box, Typography, Container} from '@mui/material';
+import {Card, CardActions,CardContent,CardMedia, CssBaseline, Grid, Box, Typography, Container, Button} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import data from '../../data/categories.json'
 import heroImage from '../classroom.jpg';
@@ -106,19 +106,19 @@ const Categories=()=> {
                         View Songs
                       </Link>
                     </Button> */}
-                  <div>
-                    <Link to={{
-                      pathname:`/${card.category}`,
-                      card
-                      :{
-                        image:card.image,
-                        title:card.title,
-                        category:card.category,
-                        description: card.description
-                      }
-                    }} >view songs</Link>
-                   </div>
-                  
+                  <Button size='small'>
+
+                    <Link 
+                    to={`/${card.category}`}
+                    state=
+                    {{
+                      image:card.image,
+                      title:card.title,
+                      category:card.category,
+                      description: card.description
+                    }
+                  } >View Songs</Link>
+                  </Button>
                   </CardActions>
                 </Card>
               </Grid>
