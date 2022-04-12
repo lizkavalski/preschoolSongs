@@ -1,18 +1,10 @@
 import * as React from 'react';
 import {Link, useLocation } from "react-router-dom";
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
+import {Button, Card, CardActions,CardContent,CardMedia, Container, CssBaseline, Grid, Box,Stack,Typography} from '@mui/material';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import songData from '../../data/songs.json';
+
 
 let songs= songData
 
@@ -73,14 +65,20 @@ const Songs = () => {
                color="secondary.light"
                gutterBottom
             >
-             {title}
+              {title}
             </Typography>
             <Typography variant="h5" align="center" color="secondary.light" paragraph>
-            {description}
+             {description}
             </Typography>
-            <Button size="small" variant="contained" color='secondary'>
-              <Link to='/'> back Home</Link>
-            </Button>
+            <Stack
+             sx={{ pt: 4 }}
+             direction="row"
+             spacing={2}
+             justifyContent="center">
+              <Button size="small" variant="contained" color='secondary'>
+                <Link to='/'> back Home</Link>
+              </Button>
+            </Stack>
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
