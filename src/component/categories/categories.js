@@ -100,7 +100,7 @@ const Categories=()=> {
                 >
                   <CardMedia
                     component="img"
-                    image={card.image}
+                    image={card.image || `https://source.unsplash.com/random?${card.title}`}
                     alt={card.title}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
