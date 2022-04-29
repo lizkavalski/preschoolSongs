@@ -1,6 +1,6 @@
 import * as React from "react";
 import {Link,useLocation, useNavigate} from "react-router-dom";
-import { Box, CardMedia, CssBaseline, AppBar, Button, Typography, Container, Stack} from "@mui/material";
+import { Box, CardMedia, CssBaseline, Button, Typography, Container, Stack} from "@mui/material";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme =createTheme({
@@ -11,6 +11,17 @@ const theme =createTheme({
     secondary: {
       light:"#fff3e0",
       main: "#ff9100",
+      containRectangle:{
+        borderRadius: "1.25rem",
+        backgroundColor: "#fab400",
+        color:"black",
+      },
+      outlineRectangle:{
+        borderRadius: "1.25rem",
+        border: "0.25rem solid #fab400",
+        color: "black",
+      },
+
     },
   },
 })
@@ -28,21 +39,18 @@ const ViewVideo =()=>{
   return(
     <ThemeProvider theme={theme}>
     <CssBaseline />
-    <AppBar position="relative">
     <title>Video Page</title>
-    <Typography variant="h4" color="inherit" noWrap align="center" paddingTop={2}> 
+    <Typography variant="h4"  noWrap align="center" paddingTop={2}> 
       {title}
     </Typography>
-      <br />
-    </AppBar>
     <Stack
         sx={{ pt: 4 }}
         direction="row"
         spacing={2}
         justifyContent="center"
         >
-        <Button variant="contained"><Link to= '/'>Back to Table of Contant</Link> </Button>
-        <Button variant="outlined" onClick={handleClick}> Back to {category}</Button>
+        <Button style={theme.palette.secondary.containRectangle}><Link style={{ textDecoration: 'none' }} to= '/' textDecoration="none" >Back to Table of Contant</Link> </Button>
+        <Button style={theme.palette.secondary.outlineRectangle}  onClick={handleClick}>  Back to {category}</Button>
       </Stack>
     <Container  
           sx={{

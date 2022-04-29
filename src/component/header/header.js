@@ -10,8 +10,8 @@ return(
 
 <AppBar position="relative">
 <Toolbar>
-<Typography variant="h6" color="inherit" noWrap>
-    Welcome!
+<Typography variant="h4" color="inherit"  align="center" noWrap>
+    PreSchool Libary!
   </Typography>
 </Toolbar>
 </AppBar>
