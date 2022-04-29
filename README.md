@@ -3,7 +3,7 @@
 
 A libary of songs used for a Developmentty preschool setting.
 
-[Link to live site](https://playful-kashata-2b1d47.netlify.app/)
+[Link to live site](https://preschoolsongbook.netlify.app/)
 
 ### Phase 1
 
