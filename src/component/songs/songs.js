@@ -16,6 +16,18 @@ const theme = createTheme({
     secondary: {
       light:"#fff3e0",
       main: "#ff9100",
+      containRectangle:{
+        borderRadius: "1.25rem",
+        backgroundColor: "#fab400",
+        color:"black",
+        padding:"0.5 2rem",
+        fontSize:"1rem"
+      },
+      outlineRectangle:{
+        borderRadius: "1.25rem",
+        border: "0.15rem solid #fab400",
+        color: "black",
+      },
     },
   },
 });
@@ -75,8 +87,8 @@ const Songs = () => {
              direction="row"
              spacing={2}
              justifyContent="center">
-              <Button size="small" variant="contained" color='secondary'>
-                <Link to='/'> back Home</Link>
+              <Button variant= "h6" style={theme.palette.secondary.containRectangle}>
+                <Link style={{ textDecoration: 'none' }} to='/'> back Home</Link>
               </Button>
             </Stack>
           </Container>
@@ -103,8 +115,8 @@ const Songs = () => {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">
-                      <Link 
+                    <Button style={theme.palette.secondary.outlineRectangle}>
+                      <Link style={{ textDecoration: 'none' }}
                       to={`/${card.category}/${card.title}`}
                       state={{
                         category:card.category,

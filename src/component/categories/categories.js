@@ -13,6 +13,18 @@ const theme = createTheme({
     secondary: {
       light:"#fff3e0",
       main: "#ff9100",
+      containRectangle:{
+        borderRadius: "1.25rem",
+        backgroundColor: "#fab400",
+        color:"black",
+        padding:"0.5 2rem",
+        fontSize:"1rem"
+      },
+      outlineRectangle:{
+        borderRadius: "1.25rem",
+        border: "0.15rem solid #fab400",
+        color: "black",
+      },
     },
   },
 });
@@ -106,9 +118,9 @@ const Categories=()=> {
                         View Songs
                       </Link>
                     </Button> */}
-                  <Button size='small'>
+                  <Button style={theme.palette.secondary.outlineRectangle}>
 
-                    <Link 
+                    <Link style={{ textDecoration: 'none' }}
                     to={`/${card.category}`}
                     state=
                     {{
