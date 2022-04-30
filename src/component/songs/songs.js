@@ -88,7 +88,7 @@ const Songs = () => {
              spacing={2}
              justifyContent="center">
               <Button variant= "h6" style={theme.palette.secondary.containRectangle}>
-                <Link style={{ textDecoration: 'none' }} to='/'> back Home</Link>
+                <Link style={{ textDecoration: 'none' }} to='/'> back to table of content</Link>
               </Button>
             </Stack>
           </Container>
