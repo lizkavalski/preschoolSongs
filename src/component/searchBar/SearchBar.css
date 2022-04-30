@@ -1,0 +1,14 @@
+.searchInputs{
+  display: flex;
+}
+.dataResult{
+  flex-direction: column;
+  position: absolute;
+  background-color: whitesmoke;
+}
+.dataResultValue{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
