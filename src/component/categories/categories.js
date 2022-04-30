@@ -34,55 +34,14 @@ const theme = createTheme({
 
 
 
-
-
 const Categories=()=> {
   const [selectedCard] = useState(data)
   let cards= selectedCard
  
 
- const getThemes = (card) =>{
-   return(
-     <Grid item key={card} xs={12} sm={6} md={4}>
-     <Card
-       sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-     >
-       <CardMedia
-         component="img"
-         image={card.image || `https://source.unsplash.com/random?${card.title}`}
-         alt={card.title}
-       />
-       <CardContent sx={{ flexGrow: 1 }}>
-         <Typography gutterBottom variant="h5" component="h2">
-           {card.title}
-         </Typography>
-         <Typography>
-           {card.description}
-         </Typography>
-       </CardContent>
-       <CardActions>
-       <Button style={theme.palette.secondary.containRectangle}>
-   
-         <Link style={{ textDecoration: 'none' }}
-         to={`/${card.category}`}
-         state=
-         {{
-           image:card.image,
-           title:card.title,
-           category:card.category,
-           description: card.description
-         }
-       } >View Songs</Link>
-       </Button>
-       </CardActions>
-     </Card>
-   </Grid>
-   )
-  }
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
- 
       <main>
         {/* Hero unit */}
         <Box
@@ -123,7 +82,41 @@ const Categories=()=> {
           </Box>
         <Container sx={{ py: 2 }} maxWidth="md" position='sticky'>
           <Grid container spacing={4} >
-            {cards.map((card) => (getThemes(card)))}
+            {cards.map((card) => (
+            <Grid item key={card} xs={12} sm={6} md={4}>
+              <Card
+                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+              >
+                <CardMedia
+                  component="img"
+                  image={card.image || `https://source.unsplash.com/random?${card.title}`}
+                  alt={card.title}
+                />
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {card.title}
+                  </Typography>
+                  <Typography>
+                    {card.description}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                <Button style={theme.palette.secondary.containRectangle}>
+            
+                  <Link style={{ textDecoration: 'none' }}
+                  to={`/${card.category}`}
+                  state=
+                  {{
+                    image:card.image,
+                    title:card.title,
+                    category:card.category,
+                    description: card.description
+                  }
+                } >View Songs</Link>
+                </Button>
+                </CardActions>
+              </Card>
+            </Grid>))}
           </Grid>
         </Container>
       </main>
