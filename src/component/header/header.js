@@ -13,7 +13,7 @@ export default function Header() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h4" component="div" sx={{ flexGrow: 1, alignContent:"center" }}>
-            Preschool Songs
+            Preschool Library
           </Typography>
           {/* <Button variant="outlined" color="inherit">Login</Button> */}
         </Toolbar>
