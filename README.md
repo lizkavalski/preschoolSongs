@@ -5,6 +5,11 @@ A libary of songs used for a Developmentty preschool setting.
 
 [Link to live site](https://preschoolsongbook.netlify.app/)
 
+### Background
+During the day I’m a paraeducator, almost like a teacher but without the paperwork or pay, for students who are developmental-delayed. At the school where I work there is a team of nine other teachers and paraeducators including myself. We use videos to show educational contents, stories, or songs to help expand student learning. Currently we are using software that is only on one computer and can’t be on the others. The other teacher has concerns with using google slides about privacy and people having access to the person's email when it opens. The problem with just going to youtube is students would get up and click on other videos or want to see other videos.
+
+Solution: create a website that can host the videos, and view them. 
+
 ### Phase 1
 
 In phase one of this website was to create a foundation for the website to grow. This means focusing on the user flow, which also includes the layout of each page. 
