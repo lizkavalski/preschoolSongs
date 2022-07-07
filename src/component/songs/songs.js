@@ -101,6 +101,14 @@ const Songs = () => {
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
+                <Link style={{ textDecoration: 'none' }}
+                to={`/${card.category}/${card.title}`}
+                state={{
+                  category:card.category,
+                  title:card.title,
+                  video: card.video
+                }}
+                >
                   <CardMedia
                     component="img"
                     image={card.image}
@@ -116,18 +124,10 @@ const Songs = () => {
                   </CardContent>
                   <CardActions>
                     <Button style={theme.palette.secondary.outlineRectangle}>
-                      <Link style={{ textDecoration: 'none' }}
-                      to={`/${card.category}/${card.title}`}
-                      state={{
-                        category:card.category,
-                        title:card.title,
-                        video: card.video
-                      }}
-                      >
                         View video
-                      </Link>
                     </Button>
                   </CardActions>
+                  </Link>
                 </Card>
               </Grid>
             ))}
