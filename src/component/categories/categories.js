@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
 import {Card, CardActions,CardContent,CardMedia, CssBaseline, Grid, Box, Typography, Container, Button,} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import data from '../../data/categories.json'
+// import data from '../../data/categories.json'
 import heroImage from '../classroom.jpg';
 // import TextField from '@mui/material/TextField';
 // import SearchIcon from '@mui/icons-material/Search';
 import SearchBar from '../searchBar/searchBar';
+import axios from 'axios';
 
 const theme = createTheme({
   palette: {
@@ -32,12 +33,21 @@ const theme = createTheme({
   },
 });
 
-
-
 const Categories=()=> {
-  const [selectedCard] = useState(data)
-  let cards= selectedCard
- 
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios.get('https://preschool-library.onrender.com/v1/theme')
+      .then(response => {
+        setData(response.data.allRecords);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
@@ -78,11 +88,11 @@ const Categories=()=> {
         </Box>
           {/* End hero unit */}
           <Box display="flex"  alignItems="center" justifyContent="center" pt={3} zIndex={3}>
-            <SearchBar placeholder='Find theme' data={cards}/>
+            <SearchBar placeholder='Find theme' data={data}/>
           </Box>
         <Container sx={{ py: 2 }} maxWidth="md" position='sticky'>
           <Grid container spacing={4} >
-            {cards.map((card) => (
+            {data.map((card) => (
             <Grid item key={card} xs={12} sm={6} md={4}>
               <Card
                 sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
@@ -107,7 +117,7 @@ const Categories=()=> {
                   to={`/${card.category}`}
                   state=
                   {{
-                    image:card.image,
+                    image:card.image || `https://source.unsplash.com/random?${card.category}`,
                     title:card.title,
                     category:card.category,
                     description: card.description

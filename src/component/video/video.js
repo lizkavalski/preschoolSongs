@@ -31,8 +31,8 @@ const ViewVideo =()=>{
 
   const title = location.state.title;
   const category = location.state.category
-  let video = location.state.video
-  
+  const video = location.state.video
+  console.log( video)
   function handleClick() {
     navigate(-1)
   }
@@ -62,12 +62,13 @@ const ViewVideo =()=>{
           component= "iframe"  
           width={560}
           height={560}
-          src= {video}
+          src= {`https://www.youtube.com/embed/${video}?si=ocxPDeR8BZL1Bx3A`}
           title="YouTube video player" 
           frameBorder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowFullScreen= "allowFullScreen"
           />
+          {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/?si=ocxPDeR8BZL1Bx3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
       </Box>
       </Container>
     </ThemeProvider>
