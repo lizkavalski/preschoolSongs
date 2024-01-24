@@ -1,12 +1,13 @@
 import * as React from 'react';
-import {Link, useLocation } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
+import axios from 'axios';
 import {Button, Card, CardActions,CardContent,CardMedia, Container, CssBaseline, Grid, Box,Stack,Typography} from '@mui/material';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import songData from '../../data/songs.json';
+// import songData from '../../data/songs.json';
 
 
-let songs= songData
+// let songs= songData
 
 const theme = createTheme({
   palette: {
@@ -34,18 +35,28 @@ const theme = createTheme({
 
 const Songs = () => {
   let location = useLocation();
-  const category= location.state.category;
+  const category = location.state.category;
   const image = location.state.image;
   const title = location.state.title;
   const description = location.state.description;
 
-  let selectedCategory= ()=>{
-    console.log('line 11 in songs', category)
-    let findSongs = songs.filter(song => song.category === category)
-    console.log("In songs.js line 13:", findSongs)
-    return findSongs
-  };
-
+  const [songs, setSongs] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
+  
+  React.useEffect(() => {
+    axios.get(`https://preschool-library.onrender.com/v1/song`)
+    .then(response => {
+      const allRecords = response.data.allRecords;
+      const filteredSongs = allRecords.filter(song => song.category === category);
+      setSongs(filteredSongs);
+      setLoading(false);
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      setLoading(false);
+    });
+  }, [category]);
+ 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -54,7 +65,7 @@ const Songs = () => {
         {/* Hero unit */}
         <Box
           sx={{
-            backgroundImage: `url(${image})`,
+            backgroundImage:`url(${image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             pt: 8,
@@ -96,7 +107,7 @@ const Songs = () => {
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {selectedCategory(category).map((card) => (
+            {songs.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
@@ -106,7 +117,7 @@ const Songs = () => {
                 state={{
                   category:card.category,
                   title:card.title,
-                  video: card.video
+                  video: card.videoId
                 }}
                 >
                   <CardMedia

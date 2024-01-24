@@ -8,6 +8,7 @@ const Login = () => {
 
   const handleLogin = () => {
     login(username, password);
+    console.log('this is the login username and password', username, password)
   };
 
   return (

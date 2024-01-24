@@ -1,10 +1,10 @@
 // AuthContext.js
 
 import { createContext, useContext, useState } from 'react';
+// import {dotenv} from dotenv
 // const response = await fetch('https://preschool-library.onrender.com/v3/login', {
 import axios from 'axios';
-const loginAPI = process.env.REACT_APP_API_URL;
-console.log("this is login api line 7",loginAPI)
+// const loginAPI = process.env.REACT_APP_API_URL;
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -13,8 +13,17 @@ export const AuthProvider = ({ children }) => {
   const login = async (username, password) => {
     try {
       // Perform authentication with Axios
-      const response = await axios.post(loginAPI, { username, password });
-      console.log("this is login api line 17",loginAPI)
+      const response = await axios.post(
+        'https://preschool-library.onrender.com/v3/login',
+        { username, password },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            ...(token && { 'Authorization': `Bearer ${token}` }),
+          },
+        }
+        );
+        console.log("this is the response", response)
       if (response.status === 200) {
         const authToken = response.data.token; // Assuming your API returns a token
         setToken(authToken);
