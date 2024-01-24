@@ -5,10 +5,16 @@ import Footer from './component/footer/footer';
 import Songs from './component/songs/songs';
 import ViewVideo from './component/video/video';
 import {  Routes, Route  } from 'react-router-dom';
+// import Login from './context/login';
+// import { AuthProvider } from './context/authContext';
+
+
 function App() {
   return (
     <>
+ 
       <Header/>
+    
         <Routes>
           <Route path="/" element={<Categories/>}/>
           <Route path='/:category' element={<Songs/>}/>
