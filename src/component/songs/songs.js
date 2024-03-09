@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import * as React from 'react';
+import React, {useEffect,useState} from 'react';
 import {Link, useLocation} from "react-router-dom";
 import axios from 'axios';
 import {Button, Card, CardActions,CardContent,CardMedia, Container, CssBaseline, Grid, Box,Stack,Typography} from '@mui/material';
@@ -41,10 +41,10 @@ const Songs = () => {
   const title = location.state.title;
   const description = location.state.description;
 
-  const [songs, setSongs] = React.useState([]);
-  const [loading, setLoading] = React.useState(true);
+  const [songs, setSongs] = useState([]);
+  const [loading, setLoading] = useState(true);
   
-  React.useEffect(() => {
+useEffect(() => {
     axios.get(`https://preschool-library.onrender.com/v1/song`)
     .then(response => {
       const allRecords = response.data.allRecords;

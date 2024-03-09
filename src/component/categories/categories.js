@@ -80,7 +80,7 @@ const Categories=()=> {
                color="secondary.light"
                gutterBottom
             >
-             Welcome to the table of content
+             Welcome to the Table of Content
             </Typography>
             <Typography variant="h5" align="center" color="secondary.light" paragraph>
               Please select a theme
