@@ -21,8 +21,8 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^4.3.3"
-  },  
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -50,6 +50,6 @@
   "main": "index.js",
   "license": "MIT",
   "engines": {
-    "node": "18.x" 
+    "node": "18.x"
   }
 }
