@@ -15,3 +15,7 @@ Solution: create a website that can host the videos, and view them.
 In phase one of this website was to create a foundation for the website to grow. This means focusing on the user flow, which also includes the layout of each page. 
 
 The user start with by picking a category, or theme. Once a category is picked they will pick a song realted to that category, in which will show a video of the song(or story). The user can choose to go back to the home page or back to the selected category from the video page.
+
+### Phase 2 
+
+In this phase the front-end to connected to a back-end, in which user can only GET infomation and use it.
